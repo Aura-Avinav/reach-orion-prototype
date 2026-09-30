@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Primary Meta Tags -->
+  <title>AURA Studio | Bespoke Headless CMS & SaaS MVP Web Agency</title>
+  <meta name="title" content="AURA Studio | Bespoke Headless CMS & SaaS MVP Web Agency">
+  <meta name="description" content="Independent web design and engineering studio. We craft lightning-fast headless CMS websites for bootstrapping Indian businesses and resilient MVP architectures for global SaaS startups. 100% in-house crafted.">
+  <meta name="keywords" content="headless CMS India, web agency Bangalore, SaaS MVP development, custom web design, Next.js agency, startup website sprint, pre-launch CMS bootstrapping, high performance web engineering">
+  <meta name="author" content="AURA Studio">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aurastudio.agency/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aurastudio.agency/">
+  <meta property="og:title" content="AURA Studio | Bespoke Headless CMS & SaaS MVP Web Agency">
+  <meta property="og:description" content="We design and build bespoke digital flagships that convert. Headless CMS for bootstrapping Indian businesses & MVP architectures for global startups.">
+  <meta property="og:image" content="assets/cms-preview.jpg">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://aurastudio.agency/">
+  <meta name="twitter:title" content="AURA Studio | Bespoke Headless CMS & SaaS MVP Web Agency">
+  <meta name="twitter:description" content="We design and build bespoke digital flagships that convert. Transparent pricing, zero outsourcing, sub-second latency.">
+  <meta name="twitter:image" content="assets/cms-preview.jpg">
+
+  <!-- Favicon Glyph -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23A73C1E'/><path d='M30 70 L50 25 L70 70 Z' fill='%23F4F0E8'/><circle cx='50' cy='52' r='8' fill='%23E5A93B'/></svg>">
+
+  <!-- Structured Data: JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "AURA Studio",
+    "description": "Bespoke web design and engineering studio crafting high-speed headless CMS platforms for bootstrapping Indian businesses and resilient MVP architectures for global startups.",
+    "url": "https://aurastudio.agency",
+    "priceRange": "₹45,000 - ₹2,40,000 / $650 - $3,400",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressCountry": "IN"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Design & Engineering Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Bootstrap Sprint CMS"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Flagship Bespoke Web Platform"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SaaS MVP Engineering"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Ambient Dark Light Blobs & Noise -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-blob blob-teal"></div>
+    <div class="ambient-blob blob-terracotta"></div>
+    <div class="ambient-blob blob-gold"></div>
+  </div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <div class="site-wrapper">
+    
+    <!-- Top Announcement Bar -->
+    <aside class="top-notice-bar" aria-label="Agency Status & Availability">
+      <div class="notice-status">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span><strong>Accepting Projects:</strong> 2 Client Slots Available for Q2 Sprint</span>
+      </div>
+      <div class="notice-actions">
+        <span id="agency-clock" class="agency-time-clock">Bengaluru / IST: --:--:--</span>
+        <div class="currency-toggle-wrap" role="group" aria-label="Currency Selector">
+          <button type="button" class="curr-btn active" data-curr="INR" id="currency-inr-btn" aria-label="View pricing in Indian Rupees">₹ INR</button>
+          <button type="button" class="curr-btn" data-curr="USD" id="currency-usd-btn" aria-label="View pricing in US Dollars">$ USD</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="main-header">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-logo" aria-label="AURA Studio Home">
+          <span class="brand-glyph" aria-hidden="true">A</span>
+          <span>AURA<span class="text-gold">.</span>STUDIO</span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="#works" class="nav-link">Selected Works</a></li>
+            <li><a href="#services" class="nav-link">Capabilities</a></li>
+            <li><a href="#calculator" class="nav-link">Scope Calculator</a></li>
+            <li><a href="#pricing" class="nav-link">Pricing</a></li>
+            <li><a href="#process" class="nav-link">Process</a></li>
+          </ul>
+        </nav>
+
+        <a href="#contact" class="nav-cta-btn" id="nav-book-btn">
+          <span>Book Discovery</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+
+        <button type="button" class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+
+      <!-- ===================================================================
+           1. HERO SECTION
+           =================================================================== -->
+      <section class="hero-section" id="hero" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-pill-badge">
+            <span class="text-sage" aria-hidden="true">●</span>
+            <span>Independent Design &amp; Full-Stack Engineering Studio</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-heading">
+            We Design &amp; Build Bespoke <span class="text-gradient-gold">CMS &amp; SaaS Flagships</span> That Scale.
+          </h1>
+
+          <p class="hero-subhead">
+            Specialized in lightning-fast Headless CMS architectures for bootstrapping Indian businesses pre-launch, and resilient MVP web platforms for global startups. We design and write code ourselves — zero outsourcing, zero digital bloat.
+          </p>
+
+          <div class="hero-action-group">
+            <a href="#calculator" class="btn-primary" id="hero-cta-calc">
+              <span>Calculate Project Scope</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </a>
+            <a href="#works" class="btn-secondary" id="hero-cta-works">
+              <span>Explore Selected Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Hero Proof Metrics Strip -->
+          <div class="hero-metrics-grid" role="region" aria-label="Key Agency Metrics">
+            <div class="metric-item">
+              <span class="metric-number text-gold">99.8%</span>
+              <span class="metric-label">Lighthouse Performance &amp; SEO Score</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number text-sky">10-18 Days</span>
+              <span class="metric-label">Average Rapid Pre-Launch Delivery</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number text-sage">₹22M+</span>
+              <span class="metric-label">Client Revenue &amp; Funding Catalyzed</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number text-terracotta">100%</span>
+              <span class="metric-label">In-House Crafted By Founders</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           2. SELECTED WORKS / PORTFOLIO
+           =================================================================== -->
+      <section class="portfolio-section" id="works" aria-labelledby="works-heading">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Case Studies</div>
+            <h2 class="section-title" id="works-heading">Crafted For High Growth &amp; Distinction</h2>
+            <p class="section-desc">
+              Every project is custom-engineered from raw code to achieve sub-second load times, editorial prestige, and relentless conversion.
+            </p>
+          </div>
+
+          <!-- Filter Navigation -->
+          <div class="portfolio-filter-bar" role="tablist" aria-label="Portfolio Filters">
+            <button type="button" class="filter-btn active" data-filter="all" id="filter-all-btn">All Projects</button>
+            <button type="button" class="filter-btn" data-filter="cms" id="filter-cms-btn">Headless CMS</button>
+            <button type="button" class="filter-btn" data-filter="saas" id="filter-saas-btn">SaaS MVPs</button>
+            <button type="button" class="filter-btn" data-filter="editorial" id="filter-editorial-btn">Luxury &amp; D2C</button>
+          </div>
+
+          <!-- Portfolio Cards Grid -->
+          <div class="portfolio-grid" id="portfolio-items-grid">
+            
+            <!-- Project 1 -->
+            <article class="portfolio-card" data-category="cms" data-project="bharatscale" tabindex="0" aria-label="View BharatScale CMS Case Study">
+              <div class="portfolio-thumbnail-wrap">
+                <img src="assets/cms-preview.jpg" alt="BharatScale Headless CMS interface showing real-time metrics and sub-second latency" class="mockup-preview-svg" loading="lazy">
+                <span class="portfolio-tag-float">Headless CMS</span>
+                <span class="portfolio-stat-badge">+240% Traffic Lift</span>
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-client-header">
+                  <h3 class="portfolio-title">BharatScale CMS</h3>
+                  <span class="portfolio-year">2026 • Bangalore</span>
+                </div>
+                <p class="portfolio-desc">
+                  Ultra-fast headless content infrastructure for a high-growth Indian direct-to-consumer technology brand preparing for pan-India expansion.
+                </p>
+                <div class="portfolio-stack">
+                  <span class="stack-pill">Headless CMS</span>
+                  <span class="stack-pill">Next.js Edge</span>
+                  <span class="stack-pill">Tailored CSS</span>
+                  <span class="stack-pill">Razorpay Turbo</span>
+                </div>
+                <span class="card-action-link">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="portfolio-card" data-category="saas" data-project="saasflow" tabindex="0" aria-label="View SaaSFlow MVP Case Study">
+              <div class="portfolio-thumbnail-wrap">
+                <img src="assets/saas-preview.jpg" alt="SaaSFlow dark themed web application dashboard displaying revenue metrics and API keys" class="mockup-preview-svg" loading="lazy">
+                <span class="portfolio-tag-float">SaaS MVP</span>
+                <span class="portfolio-stat-badge">21 Days to Launch</span>
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-client-header">
+                  <h3 class="portfolio-title">SaaSFlow Analytics</h3>
+                  <span class="portfolio-year">2026 • Global</span>
+                </div>
+                <p class="portfolio-desc">
+                  Developer infrastructure web application built for seed-stage fundraising, onboarding 4,500+ engineering teams with sub-second API key control.
+                </p>
+                <div class="portfolio-stack">
+                  <span class="stack-pill">TypeScript</span>
+                  <span class="stack-pill">Clean Architecture</span>
+                  <span class="stack-pill">Vite</span>
+                  <span class="stack-pill">Chart.js</span>
+                </div>
+                <span class="card-action-link">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="portfolio-card" data-category="editorial" data-project="vedaliving" tabindex="0" aria-label="View Veda Living Case Study">
+              <div class="portfolio-thumbnail-wrap">
+                <img src="assets/luxury-preview.jpg" alt="Veda Living luxury dark editorial website layout with bespoke typography" class="mockup-preview-svg" loading="lazy">
+                <span class="portfolio-tag-float">Editorial &amp; D2C</span>
+                <span class="portfolio-stat-badge">3.1x Waitlist Surge</span>
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-client-header">
+                  <h3 class="portfolio-title">Veda Living</h3>
+                  <span class="portfolio-year">2026 • Mumbai &amp; London</span>
+                </div>
+                <p class="portfolio-desc">
+                  Bespoke editorial flagship for a luxury Ayurvedic wellness collective, combining tactile typography, smooth motion, and seamless global checkout.
+                </p>
+                <div class="portfolio-stack">
+                  <span class="stack-pill">Editorial CMS</span>
+                  <span class="stack-pill">Fluid Motion</span>
+                  <span class="stack-pill">Shopify Storefront</span>
+                  <span class="stack-pill">Multi-Currency</span>
+                </div>
+                <span class="card-action-link">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="portfolio-card" data-category="saas" data-project="omnisync" tabindex="0" aria-label="View OmniSync Cloud Case Study">
+              <div class="portfolio-thumbnail-wrap">
+                <img src="assets/devtools-preview.jpg" alt="OmniSync Cloud developer portal with interactive API documentation" class="mockup-preview-svg" loading="lazy">
+                <span class="portfolio-tag-float">Web Platform</span>
+                <span class="portfolio-stat-badge">&lt;30ms Edge Query</span>
+              </div>
+              <div class="portfolio-info">
+                <div class="portfolio-client-header">
+                  <h3 class="portfolio-title">OmniSync Cloud</h3>
+                  <span class="portfolio-year">2026 • Distributed</span>
+                </div>
+                <p class="portfolio-desc">
+                  Interactive developer documentation and API reference platform featuring live syntax test runners, edge caching, and automated status monitors.
+                </p>
+                <div class="portfolio-stack">
+                  <span class="stack-pill">Edge Worker</span>
+                  <span class="stack-pill">Syntax Highlighting</span>
+                  <span class="stack-pill">Algolia Instant</span>
+                  <span class="stack-pill">Modern Web APIs</span>
+                </div>
+                <span class="card-action-link">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           3. SERVICES & CAPABILITIES BENTO GRID
+           =================================================================== -->
+      <section class="services-section" id="services" aria-labelledby="services-heading">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Core Capabilities</div>
+            <h2 class="section-title" id="services-heading">Full-Stack Craftsmanship Under One Roof</h2>
+            <p class="section-desc">
+              We do not juggle sub-contractors or junior hand-offs. The founders who lead your strategy are the ones writing your code.
+            </p>
+          </div>
+
+          <div class="bento-grid">
+            
+            <!-- Bento 1: Large -->
+            <div class="glass-panel bento-card col-span-2">
+              <div>
+                <div class="bento-icon-wrap icon-teal">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <h3 class="bento-title">Headless CMS &amp; Modern Web Architecture</h3>
+                <p class="bento-text">
+                  Tailored specifically for Indian businesses bootstrapping pre-launch who need complete content agility without the crippling load times or security vulnerabilities of bloated WordPress plugins.
+                </p>
+              </div>
+              <ul class="bento-feature-list">
+                <li class="bento-feature-item"><span class="check-dot"></span> Intuitive visual content authoring (Sanity, Strapi, Decap, or custom Markdown engines)</li>
+                <li class="bento-feature-item"><span class="check-dot"></span> Sub-second serverless edge page rendering on Cloudflare and Vercel</li>
+                <li class="bento-feature-item"><span class="check-dot"></span> Built-in Indian payment rails: Razorpay, Cashfree, UPI, and Stripe</li>
+              </ul>
+            </div>
+
+            <!-- Bento 2 -->
+            <div class="glass-panel bento-card">
+              <div>
+                <div class="bento-icon-wrap icon-gold">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <h3 class="bento-title">Technical SEO &amp; Core Web Vitals</h3>
+                <p class="bento-text">
+                  Ranking on Google requires more than keywords. We build search dominance directly into the document object model.
+                </p>
+              </div>
+              <ul class="bento-feature-list">
+                <li class="bento-feature-item"><span class="check-dot"></span> Complete Schema.org JSON-LD graph generation</li>
+                <li class="bento-feature-item"><span class="check-dot"></span> 100/100 Lighthouse performance audits</li>
+                <li class="bento-feature-item"><span class="check-dot"></span> Zero layout shift (CLS) &amp; instant INP response</li>
+              </ul>
+            </div>
+
+            <!-- Bento 3 -->
+            <div class="glass-panel bento-card">
+              <div>
+                <div class="bento-icon-wrap icon-terracotta">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                </div>
+                <h3 class="bento-title">SaaS MVP Engineering</h3>
+                <p class="bento-text">
+                  Ready to evolve from pre-launch to a global SaaS? We construct clean, scalable web applications with modular data layers.
+                </p>
+              </div>
+              <ul class="bento-feature-list">
+                <li class="bento-feature-item"><span class="check-dot"></span> Secure authentication &amp; role-based access</li>
+                <li class="bento-feature-item"><span class="check-dot"></span> Real-time analytics &amp; interactive data dashboards</li>
+                <li class="bento-feature-item"><span class="check-dot"></span> Rapid 3-week prototype-to-production pipeline</li>
+              </ul>
+            </div>
+
+            <!-- Bento 4: Large -->
+            <div class="glass-panel bento-card col-span-2">
+              <div>
+                <div class="bento-icon-wrap icon-sage">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+                </div>
+                <h3 class="bento-title">Bespoke Design Systems &amp; Dark Luxury Aesthetics</h3>
+                <p class="bento-text">
+                  We don't use generic component libraries. Every color token, typography scale, micro-interaction, and glassmorphic reflection is designed bespoke in Figma and crafted with native CSS for an unmistakable luxury presence.
+                </p>
+              </div>
+              <ul class="bento-feature-list">
+                <li class="bento-feature-item"><span class="check-dot"></span> Tailored 12-color token systems with accessibility-audited contrast</li>
+                <li class="bento-feature-item"><span class="check-dot"></span> Custom motion studies, hover physics, and magnetic cursor states</li>
+                <li class="bento-feature-item"><span class="check-dot"></span> Multi-device responsive precision across desktop, tablet, and mobile</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           4. INTERACTIVE PROJECT SCOPE & COST ESTIMATOR
+           =================================================================== -->
+      <section class="calculator-section" id="calculator" aria-labelledby="calc-heading">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Interactive Estimator</div>
+            <h2 class="section-title" id="calc-heading">Estimate Your Investment &amp; Timeline</h2>
+            <p class="section-desc">
+              No vague "get in touch for pricing" walls. Configure your exact requirements below and see transparent estimates instantly.
+            </p>
+          </div>
+
+          <div class="calculator-wrapper">
+            
+            <!-- Left: Options & Sliders -->
+            <div class="calc-inputs-col">
+              
+              <!-- 1. Project Type -->
+              <div>
+                <label class="calc-group-title" id="lbl-project-type">
+                  <span>1. Select Project Archetype</span>
+                </label>
+                <div class="calc-chips-grid" role="radiogroup" aria-labelledby="lbl-project-type">
+                  
+                  <label class="chip-option selected" data-type="cms">
+                    <input type="radio" name="calc-project-type" value="cms" checked>
+                    <span class="chip-title">Headless CMS Site</span>
+                    <span class="chip-desc">For pre-launch businesses &amp; fast blogs</span>
+                  </label>
+
+                  <label class="chip-option" data-type="saas">
+                    <input type="radio" name="calc-project-type" value="saas">
+                    <span class="chip-title">SaaS MVP Platform</span>
+                    <span class="chip-desc">App dashboard, auth &amp; dynamic data</span>
+                  </label>
+
+                  <label class="chip-option" data-type="ecommerce">
+                    <input type="radio" name="calc-project-type" value="ecommerce">
+                    <span class="chip-title">D2C E-Commerce</span>
+                    <span class="chip-desc">Shopify storefront or custom checkout</span>
+                  </label>
+
+                  <label class="chip-option" data-type="redesign">
+                    <input type="radio" name="calc-project-type" value="redesign">
+                    <span class="chip-title">Design &amp; Speed Redesign</span>
+                    <span class="chip-desc">Rebuild existing slow website for conversion</span>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- 2. Scope / Page Count Slider -->
+              <div class="range-slider-container">
+                <div class="slider-label-row">
+                  <span class="calc-group-title" style="margin-bottom: 0;">2. Number of Custom Pages</span>
+                  <span class="slider-value-display" id="calc-pages-display">5 Pages</span>
+                </div>
+                <input type="range" class="custom-range" id="calc-pages-slider" min="1" max="15" value="5" step="1" aria-label="Select custom page count">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-dim); font-family: var(--font-mono);">
+                  <span>1 Page (Landing)</span>
+                  <span>5 Pages (Standard)</span>
+                  <span>10 Pages (Comprehensive)</span>
+                  <span>15+ Pages</span>
+                </div>
+              </div>
+
+              <!-- 3. Feature Add-ons -->
+              <div>
+                <label class="calc-group-title">
+                  <span>3. Optional High-Impact Capabilities</span>
+                </label>
+                <div class="calc-checkbox-list">
+                  
+                  <label class="checkbox-item checked">
+                    <input type="checkbox" class="addon-calc-checkbox" value="seo" checked>
+                    <span>Advanced SEO Schema</span>
+                  </label>
+
+                  <label class="checkbox-item checked">
+                    <input type="checkbox" class="addon-calc-checkbox" value="admin" checked>
+                    <span>Visual CMS Admin Panel</span>
+                  </label>
+
+                  <label class="checkbox-item">
+                    <input type="checkbox" class="addon-calc-checkbox" value="motion">
+                    <span>Bespoke Micro-Animations</span>
+                  </label>
+
+                  <label class="checkbox-item">
+                    <input type="checkbox" class="addon-calc-checkbox" value="gateway">
+                    <span>Razorpay / Stripe Gateway</span>
+                  </label>
+
+                  <label class="checkbox-item checked">
+                    <input type="checkbox" class="addon-calc-checkbox" value="perf" checked>
+                    <span>Sub-Second TTFB Tuning</span>
+                  </label>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Realtime Summary Box -->
+            <div class="calc-summary-col">
+              <div class="summary-header">
+                <span class="summary-tag">Live Investment Estimate</span>
+                <div class="summary-price-box">
+                  <div class="estimated-price-num" id="calc-estimated-price">₹67,000</div>
+                  <div class="price-sub-note">Fixed scope guarantee • 0 hidden surprise fees</div>
+                </div>
+              </div>
+
+              <div class="summary-timeline-row">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Estimated Delivery:</span>
+                <span class="timeline-val" id="calc-estimated-timeline">2 – 3 Weeks</span>
+              </div>
+
+              <div class="summary-feature-summary" id="calc-features-summary">
+                <!-- Dynamically updated by JS -->
+              </div>
+
+              <button type="button" class="lock-scope-btn" id="lock-scope-btn">
+                Lock In This Configuration &rarr;
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           5. TRANSPARENT 3-TIER PRICING PACKAGES
+           =================================================================== -->
+      <section class="pricing-section" id="pricing" aria-labelledby="pricing-heading">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Flat Transparent Rates</div>
+            <h2 class="section-title" id="pricing-heading">Packages Tailored To Your Growth Stage</h2>
+            <p class="section-desc">
+              Predictable investments with firm delivery timelines. Toggle between ₹ INR and $ USD at the top anytime.
+            </p>
+          </div>
+
+          <div class="pricing-grid">
+            
+            <!-- Tier 1: Bootstrap Sprint -->
+            <div class="pricing-card" id="pricing-tier-bootstrap">
+              <h3 class="pricing-tier-name">Bootstrap Sprint</h3>
+              <p class="pricing-tier-desc">
+                Ideal for Indian founders bootstrapping pre-launch who need a high-speed, credible digital presence to test market demand.
+              </p>
+              
+              <div class="pricing-cost-row">
+                <div class="price-big-number" id="price-tier-1">
+                  <span class="price-currency-sign">₹</span>45,000
+                </div>
+                <div class="pricing-timeline-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>10 – 14 Days Turnaround</span>
+                </div>
+              </div>
+
+              <ul class="pricing-deliverables">
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Up to 5 Custom Responsive Pages</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Intuitive Headless CMS for blog/content</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fundamental Technical SEO &amp; Meta Tags</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Sub-1s Mobile Page Load Speed</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Contact Form + WhatsApp Direct Lead Capture</span>
+                </li>
+              </ul>
+
+              <a href="#contact" class="pricing-cta-btn">Choose Sprint</a>
+            </div>
+
+            <!-- Tier 2: Flagship Bespoke (Featured) -->
+            <div class="pricing-card featured" id="pricing-tier-flagship">
+              <div class="featured-ribbon">Most Popular</div>
+              <h3 class="pricing-tier-name text-gold">Flagship Bespoke</h3>
+              <p class="pricing-tier-desc">
+                For brands demanding a category-defining flagship website that establishes immediate trust, commands premium pricing, and dominates search.
+              </p>
+              
+              <div class="pricing-cost-row">
+                <div class="price-big-number text-gold" id="price-tier-2">
+                  <span class="price-currency-sign">₹</span>1,20,000
+                </div>
+                <div class="pricing-timeline-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>3 – 4 Weeks Turnaround</span>
+                </div>
+              </div>
+
+              <ul class="pricing-deliverables">
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Up to 10 Custom Bespoke Pages &amp; Templates</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Figma Design System with 12-color token hierarchy</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Subtle micro-animations &amp; smooth interactive motion</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Enterprise Headless CMS (Sanity / Strapi / Custom)</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Full Technical SEO Schema + Analytics Funnel</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Razorpay / Stripe Payments &amp; Checkout Setup</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>30 Days Post-Launch Founder Hypercare</span>
+                </li>
+              </ul>
+
+              <a href="#contact" class="pricing-cta-btn">Book Flagship Build</a>
+            </div>
+
+            <!-- Tier 3: SaaS MVP & Retainer -->
+            <div class="pricing-card" id="pricing-tier-saas">
+              <h3 class="pricing-tier-name">SaaS MVP &amp; Retainer</h3>
+              <p class="pricing-tier-desc">
+                For startups seeking a dedicated technical partner to construct and iterate a full-featured web application or MVP platform.
+              </p>
+              
+              <div class="pricing-cost-row">
+                <div class="price-big-number" id="price-tier-3">
+                  <span class="price-currency-sign">₹</span>2,40,000
+                </div>
+                <div class="pricing-timeline-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>4 – 6 Weeks Sprint / Retainer</span>
+                </div>
+              </div>
+
+              <ul class="pricing-deliverables">
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Full-Stack SaaS MVP Architecture</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>User Authentication, Dashboard &amp; API Keys</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>PostgreSQL / Supabase Schema Architecture</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Global Cloud Deployment (Cloudflare / AWS / Vercel)</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Direct founder access via dedicated Slack/WhatsApp channel</span>
+                </li>
+                <li class="deliverable-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>60 Days Extended Technical Support</span>
+                </li>
+              </ul>
+
+              <a href="#contact" class="pricing-cta-btn">Discuss MVP Build</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           6. OUR 4-STAGE PROCESS
+           =================================================================== -->
+      <section class="process-section" id="process" aria-labelledby="process-heading">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Agency Methodology</div>
+            <h2 class="section-title" id="process-heading">A Disciplined, Zero-Nonsense Pipeline</h2>
+            <p class="section-desc">
+              We eliminate endless design committees and bureaucratic lag. Here is how your project goes from concept to live production.
+            </p>
+          </div>
+
+          <div class="process-timeline">
+            
+            <div class="process-card">
+              <div class="step-num">01</div>
+              <h3 class="step-title">Blueprint &amp; Architecture</h3>
+              <p class="step-text">
+                We dissect your business model, target audience, and pre-launch positioning. We define the exact schema, tech stack, and content model before touching a single pixel.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="step-num">02</div>
+              <h3 class="step-title">Bespoke Design</h3>
+              <p class="step-text">
+                We craft an editorial dark design system around your brand palette. High-fidelity interactive prototypes in Figma let you experience the exact feel and flow.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="step-num">03</div>
+              <h3 class="step-title">Clean Engineering</h3>
+              <p class="step-text">
+                We write clean, semantic HTML5, modern CSS tokens, and lightweight JavaScript. Every route is verified for sub-second latency, accessible ARIA rules, and zero layout shift.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="step-num">04</div>
+              <h3 class="step-title">Launch &amp; Hypercare</h3>
+              <p class="step-text">
+                Production deployment, domain DNS switchover, search console verification, and founder training on your new CMS. We stand by your side with 30-60 days dedicated support.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           7. CLIENT TESTIMONIALS & PROOF
+           =================================================================== -->
+      <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Founder Endorsements</div>
+            <h2 class="section-title" id="testimonials-heading">Trusted By Visionaries Building What's Next</h2>
+            <p class="section-desc">
+              Read how our headless CMS and MVP builds accelerate pre-launch momentum and investor conviction.
+            </p>
+          </div>
+
+          <div class="testimonials-grid">
+            
+            <div class="testimonial-card">
+              <div>
+                <div class="quote-stars">★★★★★</div>
+                <p class="quote-body">
+                  "As an Indian startup bootstrapping pre-launch, every rupee and every week counts. AURA Studio gave us a headless CMS platform that feels like it cost 10x what we paid. Our investor pitch meetings started with compliments on our site."
+                </p>
+              </div>
+              <div class="client-author-row">
+                <div class="client-avatar-circle">RK</div>
+                <div>
+                  <div class="client-name">Rohan Kulkarni</div>
+                  <div class="client-role">Founder, BharatScale Labs</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div>
+                <div class="quote-stars">★★★★★</div>
+                <p class="quote-body">
+                  "Most agencies claim they do full-stack, but then outsource the development to low-cost subcontractors. Working directly with founders who both designed our dark UI and wrote the entire MVP code in 3 weeks was a revelation."
+                </p>
+              </div>
+              <div class="client-author-row">
+                <div class="client-avatar-circle">DR</div>
+                <div>
+                  <div class="client-name">Devin Ross</div>
+                  <div class="client-role">CTO, SaaSFlow Technologies</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div>
+                <div class="quote-stars">★★★★★</div>
+                <p class="quote-body">
+                  "Our mobile bounce rate dropped from 58% to under 18% within 48 hours of deploying our new headless store. The 12-color branding palette looks astonishing in dark mode. Absolutely world-class."
+                </p>
+              </div>
+              <div class="client-author-row">
+                <div class="client-avatar-circle">AS</div>
+                <div>
+                  <div class="client-name">Ananya Sengupta</div>
+                  <div class="client-role">Co-Founder, Veda Wellness</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           8. PROJECT INTAKE & LEAD CAPTURE PORTAL (ZERO DB REQUIRED)
+           =================================================================== -->
+      <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="intake-portal-box">
+            
+            <!-- Left Info -->
+            <div class="intake-info-col">
+              <div>
+                <div class="section-tag" style="margin-bottom: 12px;">Start A Project</div>
+                <h2 style="font-size: 2.2rem; margin-bottom: 16px; color: var(--text-main);">Let's Build Something Exceptional.</h2>
+                <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.6;">
+                  Tell us about your venture, pre-launch timeline, or MVP vision. We reply within 24 hours with concrete architecture recommendations and a firm quote.
+                </p>
+
+                <div class="intake-guarantees">
+                  <div class="guarantee-item">
+                    <span class="guarantee-icon">✓</span>
+                    <span>100% In-house design &amp; engineering by founders</span>
+                  </div>
+                  <div class="guarantee-item">
+                    <span class="guarantee-icon">✓</span>
+                    <span>No surprise invoice overruns — fixed price guarantee</span>
+                  </div>
+                  <div class="guarantee-item">
+                    <span class="guarantee-icon">✓</span>
+                    <span>NDA signed upfront upon request</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Instant Direct WhatsApp Chat -->
+              <div class="quick-direct-chat">
+                <div class="chat-prompt"><strong>Prefer a direct conversation?</strong></div>
+                <a href="https://wa.me/919876543210?text=Hi%20AURA%20Studio,%20I'm%20interested%20in%20discussing%20a%20web%20project%20for%20my%20startup." target="_blank" rel="noopener noreferrer" class="whatsapp-direct-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                  <span>Chat With Us on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Form -->
+            <div>
+              <form class="intake-form" id="agency-intake-form">
+                
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="client-name">Your Name *</label>
+                    <input type="text" class="form-input" id="client-name" name="name" placeholder="e.g. Arjun Mehta" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="client-email">Work Email *</label>
+                    <input type="email" class="form-input" id="client-email" name="email" placeholder="arjun@company.com" required>
+                  </div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="client-phone">Phone / WhatsApp</label>
+                    <input type="tel" class="form-input" id="client-phone" name="phone" placeholder="+91 98765 43210">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="project-type-select">Project Archetype</label>
+                    <select class="form-select" id="project-type-select" name="projectType">
+                      <option value="Headless CMS">Headless CMS (Pre-Launch)</option>
+                      <option value="SaaS MVP">SaaS MVP Web Platform</option>
+                      <option value="E-Commerce">D2C E-Commerce</option>
+                      <option value="Website Redesign">Website Redesign &amp; Speed</option>
+                      <option value="Monthly Retainer">Dedicated Retainer</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="budget-estimate">Target Investment Budget</label>
+                  <input type="text" class="form-input" id="budget-estimate" name="budget" placeholder="e.g. ₹50,000 – ₹1,20,000 or $1,500">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="project-brief">Project Brief &amp; Target Launch Date *</label>
+                  <textarea class="form-textarea" id="project-brief" name="brief" rows="4" placeholder="Tell us about what you're building, key features needed, and your target launch date..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-btn" id="submit-inquiry-btn">
+                  Submit Project Inquiry &rarr;
+                </button>
+
+                <!-- Feedback Banner -->
+                <div class="form-feedback-msg" id="form-feedback" role="status" aria-live="polite"></div>
+
+                <p style="font-size: 0.78rem; color: var(--text-dim); text-align: center; margin-top: 4px;">
+                  🔒 Inquiries are processed confidentially. Zero spam, guaranteed.
+                </p>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Case Study Interactive Modal Dialog -->
+    <div class="modal-overlay" id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-content-box">
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study Details">&times;</button>
+        <div id="modal-body-content">
+          <!-- Dynamically populated via js/app.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Luxury Minimal Dark Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        
+        <div class="footer-top-row">
+          <div>
+            <a href="#hero" class="brand-logo">
+              <span class="brand-glyph" aria-hidden="true">A</span>
+              <span>AURA<span class="text-gold">.</span>STUDIO</span>
+            </a>
+            <p class="footer-brand-bio">
+              Independent digital design &amp; full-stack engineering studio. Building high-speed headless CMS websites and resilient SaaS MVPs for ambitious founders.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-link-list">
+              <li><a href="#works" class="footer-link">Selected Work</a></li>
+              <li><a href="#services" class="footer-link">Capabilities</a></li>
+              <li><a href="#calculator" class="footer-link">Scope Calculator</a></li>
+              <li><a href="#pricing" class="footer-link">Pricing Packages</a></li>
+              <li><a href="#process" class="footer-link">Process Pipeline</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Solutions</h4>
+            <ul class="footer-link-list">
+              <li><a href="#services" class="footer-link">Headless CMS</a></li>
+              <li><a href="#services" class="footer-link">Pre-Launch Bootstrapping</a></li>
+              <li><a href="#services" class="footer-link">SaaS MVP Engineering</a></li>
+              <li><a href="#services" class="footer-link">Core Web Vitals SEO</a></li>
+              <li><a href="#services" class="footer-link">Design Systems</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Direct Connect</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">
+              Ready to collaborate? Reach out directly to the founders:
+            </p>
+            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--palette-soft-sky-blue); margin-bottom: 8px;">
+              hello@aurastudio.agency
+            </div>
+            <div style="font-size: 0.85rem; color: var(--palette-subtle-mist-grey);">
+              Bengaluru, India • Serving Global Founders
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>
+            &copy; 2026 AURA Studio. All rights reserved. Designed and developed 100% in-house.
+          </div>
+          <div style="display: flex; gap: 20px;">
+            <a href="#contact" class="footer-link">Privacy Policy</a>
+            <a href="#contact" class="footer-link">Terms of Service</a>
+            <a href="#main-header" class="footer-link">Back to Top ↑</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
