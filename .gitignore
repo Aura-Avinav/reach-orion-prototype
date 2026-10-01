@@ -1,0 +1,33 @@
+# Environment and Secret Keys
+.env
+.env.local
+.env.*.local
+*.env
+!*.env.example
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production Builds
+dist/
+client/dist/
+
+# Logs & Debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Server Local Data / Backup Stores (Prevent committing client lead PII)
+server/data/*.json
+!server/data/.gitkeep
+
+# Operating System & IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

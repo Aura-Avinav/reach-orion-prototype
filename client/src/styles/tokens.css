@@ -1,0 +1,80 @@
+/**
+ * BRANDING PALETTE - FIG 1.1 DESIGN TOKENS
+ * Premium Minimal Dark Theme System
+ */
+
+:root {
+  /* =========================================
+     Fig 1.1 Brand Palette Swatches (Direct Mapping)
+     ========================================= */
+  --palette-warm-goldenrod: #E5A93B;
+  --palette-burnt-terracotta: #A73C1E;
+  --palette-deep-slate-teal: #2C5D63;
+  --palette-cool-cream-white: #F4F0E8;
+  --palette-light-sky-blue: #9BC4DC;
+  --palette-charcoal-black: #161719;
+  --palette-rich-walnut-brown: #54321E;
+  --palette-latte-tan: #CCA072;
+  --palette-medium-sage-green: #7C9579;
+  --palette-soft-sky-blue: #97C4DE;
+  --palette-dusty-ochre: #D89B52;
+  --palette-subtle-mist-grey: #CED2D5;
+
+  /* =========================================
+     Semantic Dark Mode Tokens
+     ========================================= */
+  --bg-primary: #121315;
+  --bg-secondary: #181A1D;
+  --bg-elevated: #1E2125;
+  --bg-card: rgba(24, 26, 29, 0.75);
+  --bg-card-hover: rgba(32, 35, 40, 0.85);
+  --bg-glass: rgba(22, 23, 25, 0.65);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(206, 210, 213, 0.12);
+  --border-medium: rgba(206, 210, 213, 0.22);
+  --border-accent: rgba(44, 93, 99, 0.45);
+  --border-glow: rgba(229, 169, 59, 0.35);
+
+  /* Typography Colors */
+  --text-main: var(--palette-cool-cream-white);
+  --text-muted: var(--palette-subtle-mist-grey);
+  --text-dim: #8E9398;
+  --text-accent: var(--palette-soft-sky-blue);
+  --text-gold: var(--palette-warm-goldenrod);
+
+  /* Action & Accent Colors */
+  --cta-primary: var(--palette-burnt-terracotta);
+  --cta-primary-hover: #BF4422;
+  --cta-gold: var(--palette-warm-goldenrod);
+  --cta-gold-hover: #F2B647;
+  --accent-teal: var(--palette-deep-slate-teal);
+  --accent-sage: var(--palette-medium-sage-green);
+  --accent-tan: var(--palette-latte-tan);
+  --accent-ochre: var(--palette-dusty-ochre);
+
+  /* Gradients & Glows */
+  --glow-teal: radial-gradient(circle at 50% 50%, rgba(44, 93, 99, 0.28), transparent 70%);
+  --glow-terracotta: radial-gradient(circle at 50% 50%, rgba(167, 60, 30, 0.22), transparent 70%);
+  --glow-gold: radial-gradient(circle at 50% 50%, rgba(229, 169, 59, 0.20), transparent 70%);
+  --gradient-card-border: linear-gradient(135deg, rgba(206, 210, 213, 0.18), rgba(44, 93, 99, 0.3), rgba(167, 60, 30, 0.2));
+
+  /* Shadows */
+  --shadow-card: 0 16px 36px -10px rgba(0, 0, 0, 0.55);
+  --shadow-glow-cta: 0 8px 24px -6px rgba(167, 60, 30, 0.45);
+  --shadow-glow-gold: 0 8px 24px -6px rgba(229, 169, 59, 0.35);
+
+  /* Typography Families */
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout & Spacing */
+  --container-max: 1240px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}

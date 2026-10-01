@@ -1,0 +1,16 @@
+{
+  "name": "aura-studio-mern",
+  "version": "1.0.0",
+  "description": "AURA Studio — Bespoke Headless CMS & SaaS MVP Web Agency (MERN Stack with Three.js 3D Background)",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"yellow.bold,cyan.bold\" \"npm run server\" \"npm run client\"",
+    "server": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "build": "npm run build:client",
+    "start": "NODE_ENV=production node server/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

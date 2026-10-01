@@ -411,6 +411,192 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // =========================================================================
+  // 7. Interactive 3D WebGL Background Animation (Three.js)
+  // =========================================================================
+  function initThreeBackground() {
+    const container = document.getElementById('three-canvas-container');
+    if (!container || typeof THREE === 'undefined') return;
+
+    try {
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x121315, 0.0018);
+
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 2000);
+      camera.position.z = 400;
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setClearColor(0x000000, 0);
+      container.appendChild(renderer.domElement);
+
+      const colorGold = new THREE.Color(0xE5A93B);
+      const colorTeal = new THREE.Color(0x2C5D63);
+      const colorTerracotta = new THREE.Color(0xA73C1E);
+      const colorSky = new THREE.Color(0x97C4DE);
+      const colorWhite = new THREE.Color(0xF4F0E8);
+
+      // Particle Starfield Constellation
+      const particleCount = 1200;
+      const particleGeometry = new THREE.BufferGeometry();
+      const positions = new Float32Array(particleCount * 3);
+      const colors = new Float32Array(particleCount * 3);
+      const colorChoices = [colorGold, colorTeal, colorTerracotta, colorSky, colorWhite];
+
+      for (let i = 0; i < particleCount; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 1600;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 1200;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 1200 - 100;
+
+        const chosenColor = colorChoices[Math.floor(Math.random() * colorChoices.length)];
+        colors[i * 3] = chosenColor.r;
+        colors[i * 3 + 1] = chosenColor.g;
+        colors[i * 3 + 2] = chosenColor.b;
+      }
+
+      particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+      // Circular glowing particle texture
+      const c = document.createElement('canvas');
+      c.width = 64;
+      c.height = 64;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+      grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+      grad.addColorStop(0.3, 'rgba(244, 240, 232, 0.7)');
+      grad.addColorStop(0.7, 'rgba(229, 169, 59, 0.25)');
+      grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 64, 64);
+
+      const particleTexture = new THREE.CanvasTexture(c);
+      const particleMaterial = new THREE.PointsMaterial({
+        size: 7,
+        map: particleTexture,
+        transparent: true,
+        vertexColors: true,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
+      });
+
+      const particles = new THREE.Points(particleGeometry, particleMaterial);
+      scene.add(particles);
+
+      // Undulating 3D Wave Wireframe Plane
+      const waveCols = 38;
+      const waveRows = 38;
+      const waveGeometry = new THREE.PlaneGeometry(1400, 1000, waveCols - 1, waveRows - 1);
+      waveGeometry.rotateX(-Math.PI / 2.3);
+      waveGeometry.translate(0, -220, -50);
+
+      const waveMaterial = new THREE.MeshBasicMaterial({
+        color: 0x2C5D63,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.18
+      });
+
+      const waveMesh = new THREE.Mesh(waveGeometry, waveMaterial);
+      scene.add(waveMesh);
+
+      // Kinetic Geometric Brand Core
+      const coreGroup = new THREE.Group();
+      coreGroup.position.set(280, 40, -120);
+
+      const icoGeo = new THREE.IcosahedronGeometry(110, 1);
+      const icoMat = new THREE.MeshBasicMaterial({ color: 0xE5A93B, wireframe: true, transparent: true, opacity: 0.22 });
+      coreGroup.add(new THREE.Mesh(icoGeo, icoMat));
+
+      const octGeo = new THREE.OctahedronGeometry(65, 0);
+      const octMat = new THREE.MeshBasicMaterial({ color: 0xA73C1E, wireframe: true, transparent: true, opacity: 0.35 });
+      coreGroup.add(new THREE.Mesh(octGeo, octMat));
+
+      const ringGeo = new THREE.TorusGeometry(145, 1.2, 16, 100);
+      const ringMat = new THREE.MeshBasicMaterial({ color: 0x97C4DE, transparent: true, opacity: 0.28 });
+      const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+      ringMesh.rotation.x = Math.PI / 3;
+      coreGroup.add(ringMesh);
+
+      scene.add(coreGroup);
+
+      // Mouse Parallax & Dynamic Tracking
+      let targetMouseX = 0;
+      let targetMouseY = 0;
+      let currentMouseX = 0;
+      let currentMouseY = 0;
+      let scrollY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        targetMouseX = (e.clientX / window.innerWidth) * 2 - 1;
+        targetMouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+      }, { passive: true });
+
+      window.addEventListener('scroll', () => {
+        scrollY = window.scrollY || window.pageYOffset;
+      }, { passive: true });
+
+      const handleResize = () => {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        if (w < 900) {
+          coreGroup.position.set(0, 100, -200);
+          coreGroup.scale.set(0.65, 0.65, 0.65);
+        } else {
+          coreGroup.position.set(280, 40, -120);
+          coreGroup.scale.set(1, 1, 1);
+        }
+      };
+      handleResize();
+      window.addEventListener('resize', handleResize);
+
+      const startTime = performance.now();
+      const wavePos = waveGeometry.attributes.position;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        const t = (performance.now() - startTime) * 0.001;
+
+        currentMouseX += (targetMouseX - currentMouseX) * 0.05;
+        currentMouseY += (targetMouseY - currentMouseY) * 0.05;
+
+        camera.position.x = currentMouseX * 50;
+        camera.position.y = currentMouseY * 40 - scrollY * 0.15;
+        camera.lookAt(0, -scrollY * 0.15, 0);
+
+        particles.rotation.y = t * 0.03 + currentMouseX * 0.1;
+        particles.rotation.x = Math.sin(t * 0.02) * 0.05;
+
+        coreGroup.rotation.x = t * 0.2 + currentMouseY * 0.3;
+        coreGroup.rotation.y = t * 0.25 + currentMouseX * 0.3;
+        coreGroup.rotation.z = t * 0.1;
+        ringMesh.rotation.z = -t * 0.4;
+
+        for (let i = 0; i < wavePos.count; i++) {
+          const u = i % waveCols;
+          const v = Math.floor(i / waveCols);
+          const w = Math.sin(t * 1.5 + u * 0.35 + v * 0.25) * 22;
+          const cw = Math.cos(t * 0.8 + u * 0.2) * 14;
+          wavePos.setZ(i, w + cw);
+        }
+        wavePos.needsUpdate = true;
+
+        renderer.render(scene, camera);
+      }
+      animate();
+    } catch (err) {
+      console.warn('Three.js background initialization deferred:', err);
+    }
+  }
+
+  initThreeBackground();
+
   // Initialize Calculator on load
   calculateProjectCost();
   updateTierPricing();

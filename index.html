@@ -74,12 +74,20 @@
   }
   </script>
 
+  <!-- Professional Branding Fonts: Syne (Display), Plus Jakarta Sans (Body), JetBrains Mono (Tech) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
+
+  <!-- 3D Interactive WebGL Animation Background Container -->
+  <div id="three-canvas-container" class="three-canvas-wrap" aria-hidden="true"></div>
 
   <!-- Ambient Dark Light Blobs & Noise -->
   <div class="ambient-bg" aria-hidden="true">
@@ -1009,6 +1017,9 @@
     </footer>
 
   </div>
+
+  <!-- Three.js WebGL Library for 3D Background Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- Main Application Script -->
   <script src="js/app.js"></script>

@@ -1,18 +1,56 @@
-# AURA Studio — Luxury Dark Web Agency Website
+# AURA Studio — Luxury Dark Web Agency (MERN Tech Stack)
 
-A high-performance, dark-luxury web agency website built with semantic HTML5, modern vanilla CSS tokens, and JavaScript. Engineered around the curated **12-Color Branding Palette (Fig 1.1)** with a focus on **Headless CMS for bootstrapping Indian businesses** and **SaaS MVP engineering for global startups**.
+A high-performance, dark-luxury web agency platform built on the full **MERN Tech Stack** (MongoDB, Express, React, Node.js) with an **interactive 3D WebGL Three.js background animation**, professional branding typography, dual-currency estimation engine, and comprehensive SEO architecture.
+
+Engineered around the curated **12-Color Branding Palette (Fig 1.1)** with a specialized focus on **Headless CMS for bootstrapping Indian businesses** and **SaaS MVP engineering for global startups**.
+
+---
+
+## 🛠️ Architecture & Tech Stack
+
+### 1. Frontend (`client/`)
+- **React 19 / 18** with **Vite** for ultra-fast HMR and sub-second builds.
+- **Three.js Interactive 3D Background**: Real-time WebGL particle constellation, glowing brand polyhedra (icosahedron/octahedron/torus knot), undulating 3D wave mesh, and smooth mouse parallax.
+- **Branding Fonts**:
+  - Display: **`Syne`** (Bold avant-garde luxury geometric branding)
+  - Body: **`Plus Jakarta Sans`** (Ultra-crisp modern editorial font)
+  - Monospace: **`JetBrains Mono`** (High-precision technical metrics & tags)
+- **Comprehensive SEO Layout**:
+  - Full OpenGraph & Twitter Card metadata
+  - `Schema.org` `ProfessionalService` & `OfferCatalog` JSON-LD structured data
+  - Semantic HTML5 hierarchy, landmark roles, and accessible ARIA attributes
+- **Interactive Components**:
+  - Dual-Currency Switcher (₹ INR / $ USD)
+  - Dynamic Project Scope & Cost Estimator with live recalculation
+  - Filterable Case Studies with architectural modal dialogs
+  - Frictionless Lead Intake Form with instant database persistence
+  - Live Slide-Out Admin Drawer to view MongoDB leads in real time
+
+### 2. Backend (`server/`)
+- **Node.js** & **Express** REST API.
+- **MongoDB** integration with **Mongoose** (`server/models/Inquiry.js`, `server/models/CaseStudy.js`).
+- **Resilient Dual-Mode Storage**:
+  - Automatically connects to MongoDB (or MongoDB Atlas via `MONGODB_URI` in `.env`).
+  - Gracefully falls back to a file-backed JSON store in `server/data/` if MongoDB is offline, guaranteeing 100% zero-failure out-of-the-box operation.
+- **API Endpoints**:
+  - `POST /api/inquiries`: Submit project briefs directly to the database.
+  - `GET /api/inquiries`: Fetch all stored leads for admin review.
+  - `DELETE /api/inquiries/:id`: Remove or archive inquiries.
+  - `GET /api/case-studies`: Fetch portfolio case studies and metrics.
+  - `POST /api/estimates/calculate`: Server-side scope calculation verification.
+  - `GET /api/health`: Health status and database diagnostic endpoint.
 
 ---
 
 ## 🎨 Branding Palette Implementation (Fig 1.1)
 
-All 12 colors are tokenized in [`css/tokens.css`](file:///run/media/avinav/Personal%20Files/projects/random/css/tokens.css):
+All 12 colors are tokenized in `css/tokens.css` and `client/src/styles/tokens.css`:
 
 | Swatch | Hex Code | Role |
 | :--- | :--- | :--- |
-| **Warm Goldenrod** | `#E5A93B` | Featured badges, key metrics, pricing highlights |
-| **Burnt Terracotta** | `#A73C1E` | High-conversion primary CTAs & buttons |
-| **Deep Slate Teal** | `#2C5D63` | Ambient mesh glow, card borders, secondary tags |
+| **Warm Goldenrod** | `#E5A93B` | Featured badges, key metrics, pricing highlights, 3D particles |
+| **Burnt Terracotta** | `#A73C1E` | High-conversion primary CTAs, buttons, 3D core |
+| **Deep Slate Teal** | `#2C5D63` | Ambient mesh glow, card borders, 3D undulating wave plane |
 | **Cool Cream White** | `#F4F0E8` | High-contrast editorial headings & titles |
 | **Light Sky Blue** | `#9BC4DC` | Subdued secondary accent |
 | **Charcoal Black** | `#161719` | Root background & deep card layering |
@@ -25,47 +63,63 @@ All 12 colors are tokenized in [`css/tokens.css`](file:///run/media/avinav/Perso
 
 ---
 
-## ⚡ Core Features
+## 🚀 Running the Project
 
-1. **Dual-Currency Switcher (₹ INR / $ USD)**:
-   - Toggles pricing tiers and the scope calculator between Indian Rupees and US Dollars.
-2. **Interactive Project Scope & Cost Estimator**:
-   - Live recalculation based on archetype, page count slider, and feature add-on checkboxes.
-   - **"Lock In This Configuration"** pre-fills the inquiry form automatically.
-3. **Transparent 3-Tier Packages**:
-   - **Bootstrap Sprint** (₹45,000 / $650 • 10–14 days)
-   - **Flagship Bespoke** (₹1,20,000 / $1,750 • 3–4 weeks)
-   - **SaaS MVP & Retainer** (₹2,40,000 / $3,400 • 4–6 weeks)
-4. **Interactive Case Studies & Modal**:
-   - Filterable by Headless CMS, SaaS MVP, and Luxury & D2C.
-   - Clickable cards open an architectural deep-dive dialog with quantifiable metrics.
-5. **Zero-Database Frictionless Lead Intake**:
-   - Saves submissions directly to browser `localStorage`.
-   - Generates pre-filled `mailto:` email fallback with one click.
-   - Direct 1-click WhatsApp chat integration.
-6. **Built-in SEO & Performance**:
-   - `Schema.org` `ProfessionalService` JSON-LD graph.
-   - OpenGraph and Twitter card metadata.
-   - Sub-second load times with zero third-party framework dependencies.
+### Option 1: Full MERN Stack (Recommended)
+
+Run both the Express backend API and the Vite React frontend concurrently with one command from the project root:
+
+```bash
+# Install root dependencies
+npm install
+
+# Start both Node/Express API server (port 5000) & Vite React client (port 5173):
+npm run dev
+```
+
+- **React Client**: [http://localhost:5173](http://localhost:5173) (Proxies `/api` to Express)
+- **Express API**: [http://localhost:5000/api/health](http://localhost:5000/api/health)
+
+### Option 2: Production Build & Run
+
+```bash
+# Build React client bundle
+npm run build
+
+# Start production server (serves React dist + API on port 5000)
+npm start
+```
+
+### Option 3: Standalone Client or Server
+
+```bash
+# Run backend only:
+npm run server
+
+# Run frontend only:
+npm run client
+```
+
+### Option 4: Static Preview (Zero-Build Fallback)
+
+The root also preserves the standalone static HTML/CSS/JS version with Three.js CDN integration:
+
+```bash
+python3 -m http.server 4321
+# Open http://localhost:4321 in browser
+```
 
 ---
 
-## 🚀 Running Locally
+## ⚙️ MongoDB Configuration
 
-The local preview server is already running on port 4321:
-```bash
-# Open in your browser:
-http://localhost:4321
-```
+By default, the server connects to local MongoDB or gracefully uses the local file store in `server/data/inquiries.json`. To connect to a cloud MongoDB Atlas database:
 
-Or run anytime with Python:
-```bash
-python3 -m http.server 4321
-```
-
-## 🌐 Deploying to Production (Zero Build Required)
-
-Because this project uses vanilla modern web standards:
-- **Cloudflare Pages**: Connect your Git repo or run `npx wrangler pages deploy .`
-- **Vercel**: Run `npx vercel .`
-- **GitHub Pages**: Push to repository and enable GitHub Pages in Settings.
+1. Create a `server/.env` file (copy from `server/.env.example`).
+2. Add your MongoDB connection string:
+   ```env
+   PORT=5000
+   NODE_ENV=development
+   MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/aura_agency?retryWrites=true&w=majority
+   ```
+3. Restart the server. Mongoose will automatically connect to your Atlas cluster!
